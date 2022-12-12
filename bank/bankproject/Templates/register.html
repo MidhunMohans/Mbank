@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>REGISTER</title>
+</head>
+<style>
+    body{
+    background-color:aqua;
+    }
+</style>
+
+<body>
+<h1 style="color:red;background-color:white">REGISTER</h1>
+<form action="register" method="post">
+     {% csrf_token %}
+     <input type="text" name="username" placeholder="Enter your username"><br>
+     <input type="text" name="first_name" placeholder="First name"><br>
+     <input type="text" name="last_name" placeholder="Last name"><br>
+     <input type="email" name="email" placeholder="mail id"><br>
+     <input type="password" name="Password" placeholder="Enter your password"><br>
+     <input type="password" name="password1" placeholder="Confirm your password"><br>
+    <input type="submit">
+
+</form>
+
+{% for msg in messages %}
+<h2>{{msg}}</h2>
+{% endfor %}
+</body>
+</html>

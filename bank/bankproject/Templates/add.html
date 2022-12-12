@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container-fluid">
+
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="center">
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="Enter your Name"><br>
+    <input type="text" name="address" placeholder="Enter your address"><br>
+    <input type="text" name="date" placeholder="DOB YY-MM-DD"><br>
+    <input type="text" name="age" placeholder="Enter your Age"><br>
+    <input type="number" name="phone_num" placeholder="Enter your Phone number"><br>
+    <input type="email" name="email" placeholder="Enter your email ID"><br>
+
+ <form name="form1" id="form1" action="">
+  Sex: <select name="sex" id="sex">
+    <option value="Male" selected="selected">Male</option>
+     <option value="Female" selected="selected">Female</option>
+  </select>
+    <label for="cars">Choose a Branch:</label>
+<select name="cars" id="cars">
+  <optgroup label="Trivandrum">
+    <option value="Pothencode">Pothencode</option>
+    <option value="Pattom">Pattom</option>
+  </optgroup>
+  <optgroup label="Kollam">
+    <option value="Chavara">Chavara</option>
+    <option value="Anjel">Anjel</option>
+  </optgroup>
+    <optgroup label="Ernakulam">
+    <option value="Aluva">Aluva</option>
+    <option value="Vypin">Vypin</option>
+  </optgroup>
+</select>
+<form name="form1" id="form2" action="">
+  Account Type: <select name="acc" id="acc">
+    <option value="Savings" selected="selected">Savings</option>
+     <option value="Salary" selected="selected">Salary</option>
+    <option value="Fixed" selected="selected">Fixed</option>
+  </select><br>
+    <h6>Materials Required</h6>
+   <form action="">
+  <input type="checkbox" id="1" name="" value="">
+  <label for="">Cheque Book </label><br>
+  <input type="checkbox" id='2' name="" value="">
+  <label for="">Debit Card </label><br>
+  <input type="checkbox" id="" name="" value="">
+  <label for=""> Credit Card</label><br><br>
+<input type="submit">
+</form><br>
+
+    <a href="/" class="btn btn-primary"><b>Logout</b></a>
+</form>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+{% endblock %}
